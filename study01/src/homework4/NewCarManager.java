@@ -1,10 +1,13 @@
-package homework03;
+package homework4;
+import java.util.*;
+import homework03.Bus;
 import study_03.Car;
 import study_03.Taxi;
-import java.util.*;
 
-public class CarManager {
+public class NewCarManager implements CarManagerInterface{
 	ArrayList<Car> cars = new ArrayList<Car>();
+	
+	@Override
 	public void add(Car c) {
 		if(cars.size()<10) {
 			cars.add(c);
@@ -12,7 +15,8 @@ public class CarManager {
 			System.out.println("Manager can only manage 10 cars.");
 		}
 	}
-	
+
+	@Override
 	public ArrayList<Car> taxiList() {
 		ArrayList<Car> taxis = new ArrayList<Car>();
 		for (int i = 0; i < cars.size(); i++) {
@@ -22,7 +26,8 @@ public class CarManager {
 		}
 		return taxis;
 	}
-	
+
+	@Override
 	public ArrayList<Car> busList() {
 		ArrayList<Car> buses = new ArrayList<Car>();
 		for (int i = 0; i < cars.size(); i++) {
@@ -31,14 +36,26 @@ public class CarManager {
 			}
 		}
 		return buses;
-		
 	}
-	
-	public void searchCar(String number) {
+
+	@Override
+	public void searchCar(String number) throws Exception {
+		boolean found = false;
+		
 		for (int i = 0; i < cars.size(); i++) {
 			if(cars.get(i).getNumber() == number) {
+				found = true;
 				System.out.println(cars.get(i));
 			}
 		}
+		
+		if (found == false) {
+			Exception notFound = new CarNumException("This car number does not exist.");
+			throw notFound;
+		}
 	}
+	
+	
+
+
 }

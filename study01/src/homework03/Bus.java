@@ -20,8 +20,7 @@ public class Bus extends Car{
 	}
 	@Override
 	public String toString() {
-		return "Bus [bus number=" + getBusNum() + ", name=" + getName() + ", colour=" + getColour()
-				+ ", number=" + getNumber() + ", count=" + getCount() + "]";
+		return super.toString() + "bus number=" + getBusNum();
 	}
 	
 }

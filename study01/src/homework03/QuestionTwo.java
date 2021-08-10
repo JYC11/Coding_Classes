@@ -5,10 +5,10 @@ public class QuestionTwo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Track t = new Track(); //Track
-		Track t2 = new SubTrack(); //Track
+		Track t2 = new SubTrack(); //SubTrack
 		SubTrack subt = (SubTrack) t2; //SubTrack
 		SubTrack subt2 = new SubTrack(); //SubTrack
-//		SubTrack subt3 = (SubMember) t;
+//		SubTrack subt3 = (SubTrack) t;
 	}
 
 }

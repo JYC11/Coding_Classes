@@ -1,5 +1,6 @@
 package homework03;
 import study_03.Car;
+import study_03.Taxi;
 
 public class CarTest {
 
@@ -18,21 +19,24 @@ public class CarTest {
 		b1.setName("Bus1");
 		b1.setNumber("MFKGEJE650740");
 		manager.add(b1);
-		Car t1 = new Car();
+		Taxi t1 = new Taxi();
 		t1.setName("kakao taxi");
 		t1.setColour("yellow");
 		t1.setCount(20);
 		t1.setNumber("ABCD");
-		Car t2 = new Car();
+		t1.setArea("Seoul");
+		Taxi t2 = new Taxi();
 		t2.setName("uber taxi");
 		t2.setColour("black");
 		t2.setCount(3);
 		t2.setNumber("BFJOWE");
-		Car t3 = new Car();
+		t2.setArea("Busan");
+		Taxi t3 = new Taxi();
 		t3.setName("lyft taxi");
 		t3.setColour("white");
 		t3.setCount(1);
 		t3.setNumber("RRRR");
+		t3.setArea("Incheon");
 		manager.add(t1);
 		manager.add(t2);
 		manager.add(t3);
