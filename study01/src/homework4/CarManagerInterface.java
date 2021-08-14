@@ -1,7 +1,5 @@
 package homework4;
-
 import java.util.ArrayList;
-
 import study_03.Car;
 
 public interface CarManagerInterface {
@@ -13,5 +11,5 @@ public interface CarManagerInterface {
 	
 	public abstract ArrayList<Car> busList();
 	
-	public abstract void searchCar(String number) throws Exception;
+	public abstract void searchCar(String number) throws CarNumException;
 }

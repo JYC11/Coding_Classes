@@ -39,8 +39,9 @@ public class NewCarManager implements CarManagerInterface{
 	}
 
 	@Override
-	public void searchCar(String number) throws Exception {
+	public void searchCar(String number) throws CarNumException {
 		boolean found = false;
+		
 		
 		for (int i = 0; i < cars.size(); i++) {
 			if(cars.get(i).getNumber() == number) {
@@ -50,9 +51,10 @@ public class NewCarManager implements CarManagerInterface{
 		}
 		
 		if (found == false) {
-			Exception notFound = new CarNumException("This car number does not exist.");
-			throw notFound;
+			throw new CarNumException("No car found with this number");
 		}
+		
+		
 	}
 	
 	
